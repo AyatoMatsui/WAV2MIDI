@@ -1,2 +1,6 @@
 # sysken01
-MIDI converter
+
+以下のパッケージをインストールしてください。
+<pre>
+pip install kivy librosa numpy mido
+</pre>
