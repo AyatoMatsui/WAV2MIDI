@@ -1,46 +1,18 @@
-import enum
 from kivy.app import App
 from kivy.lang import Builder
 
 from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.uix.togglebutton import ToggleButton
-from kivy.uix.behaviors import ToggleButtonBehavior
-
 from kivy.core.audio import SoundLoader
-
-from kivy.uix.floatlayout import FloatLayout
-from kivy.factory import Factory
-from kivy.properties import ObjectProperty
-from kivy.properties import StringProperty, ListProperty, NumericProperty, BooleanProperty
-from kivy.factory import Factory
-from kivy.uix.popup import Popup
-
 from kivy.clock import Clock
-
 from kivy.core.window import Window
-
+from kivy.properties import StringProperty, NumericProperty, BooleanProperty, ListProperty
 from kivy.config import Config
 from kivy.utils import DEPRECATED_CALLERS
 Config.set("graphics", "resizable", False)
 Config.set("graphics", "width", 600)
 Config.set("graphics", "height", 480)
 
-import time
-from concurrent.futures import ThreadPoolExecutor
-
-import threading
-
-import os
-
-import pyaudio
-import subprocess
-import wave
-import sys
-sys.path
-
-import math
 import numpy as np
-import scipy as sp
 import librosa
 
 import mido
