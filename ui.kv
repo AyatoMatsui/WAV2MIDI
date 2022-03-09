@@ -1,0 +1,66 @@
+<WavListScreen>:
+    id: wavlist
+    
+    BoxLayout:
+        orientation: 'vertical'
+                
+        FileChooserIconView:
+            id: filechooser
+            on_selection: root.selected(filechooser.selection)
+            path: 'wavfiles'
+            size_hint_y: 5.0
+        
+
+        Label:
+            id: audio_label
+            text: root.filetext
+            size_hint_y: 0.5
+            font_size: 20
+
+        BoxLayout:
+            id: audio
+            source: ""
+
+            Button:
+                id: play_button
+                text: root.playtext
+                on_press: root.onClickPlayButton()
+                background_color: root.color
+
+        
+        BoxLayout: 
+            Label:
+                text: 'テンポ周波数'
+                font_name: 'ipamp.ttf'
+                size_hint_x: 2
+            Button:
+                text: '-'
+                on_press: root.onClickPlusMinusButton(-1)
+            
+            Label:
+                text: str(round(root.tempo, 2))
+            
+            Button:
+                text: '+'
+                on_press: root.onClickPlusMinusButton(+1)
+            
+            Button:
+                text: 'クロック'
+                font_name: 'ipamp.ttf'
+                on_press: root.onClickClockButton()
+                background_color: root.color2
+            
+        
+
+        BoxLayout:
+            Button:
+                font_name: 'ipamp.ttf'
+                text: 'メニューに戻る'
+                on_press: root.manager.current = 'menu'
+
+            Button:
+                size_hint_x: 2
+                font_name: 'ipamp.ttf'
+                text: root.converttext
+                background_color: root.color3
+                on_press: if root.sound: root.onClickConvertButton()
