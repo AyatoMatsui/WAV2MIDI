@@ -1,6 +1,6 @@
-# sysken01
+# WAV2MIDI
 
-# LICENSE
+## LICENSE
 Copyright 2022 Matsui Ayato  
 Based on the following conditions, I permit the use of the software.
 - Prohibition of redistributing.
@@ -8,7 +8,7 @@ Based on the following conditions, I permit the use of the software.
 - In the above, it also applies to rewrites from my origin.
 - Under no circumstances shall I accept any liability for the guarantee of software operation, or any other claims for damages.
 
-# Install
+## Install
 on Mac
 <pre>
 brew install python3
